@@ -1784,6 +1784,8 @@ int readDhtSensor(int index)
 
   // REQUEST SAMPLE
   pinMode(pin, OUTPUT);
+  digitalWrite(pin, HIGH);
+  delay(10);
   digitalWrite(pin, LOW);
   delay(wakeupDelay);
   pinMode(pin, INPUT);
